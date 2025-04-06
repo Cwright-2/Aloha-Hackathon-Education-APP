@@ -17,7 +17,7 @@
 
 ## 🚀 Technologies Used
 
-- **Google Gemini-2.0-flash-001 (Generative AI)** – For natural language responses.
+- **Google Gemini-2.0-flash-001 and Vertex AI(Generative AI)** – For natural language responses.
 - **Speech Recognition + Text-to-Speech** – Via custom `gemnai` module (or compatible tools like `SpeechRecognition`, `gTTS`, `pyttsx3`, etc.).
 - **Google Custom Search API** – For safe and filtered web queries.
 - **dotenv** – For managing API keys securely with environment variables.
