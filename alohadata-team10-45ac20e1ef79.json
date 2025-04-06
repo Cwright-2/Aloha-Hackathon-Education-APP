@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "alohadata-team10",
+  "private_key_id": "45ac20e1ef792b72372e294cfd74374a06225594",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCy7bc+6sEuYb2F\nrivFpCnS24ZV72mZcPjPccupzvhDtc9WZ9mU6oLE4ZnL1fHjH69ioXzPeiUgF/ch\nvU5GgMjXoMeceREdmlmQn7aPx4XW9TTzoZGk1pMqhHbgAJEyrELrn5g4HN2lhGL1\nlP4IOEUG5SCzY0dsGpJAmeX+zBWbdFStmZGw4jOrvZpWddsU5Xy0RrYFenM0wZX4\n0Z2AJkeY69wcNRBeioh1+l9PPqKRQq++ldytEhu1LI9aIHrHKx3nbqvu5peBUEQp\nnTF7cuxRZ1jO4BSMWNf2llq0T5Q8+J6XkwJTcVWt2kB8QCsKxTtMIuUuCIFifxoo\nwwA/6VwhAgMBAAECggEAEyjo3SwirQ6KzpiIt+R9FQbsUuHs5yElh4MqOZ//zjJX\nBivfLPbSs3Xr89uQSA+hxng/5vCvrojabgq5KcwLFanyDgOZzVd0nUu47xsArjS6\nK5eCwsm2XxBpsVFmOuyeyt/fWyzeICX1udHvRN6Pp64b6xGnuX/75r6EFh1w9+EW\nOsm2Dog+oHYh2PvuMN81MglaCMSX4tCGusoiCb2QfAnnyZFbHF65X2VULiu8hiR1\neu7PpKN6fEirTUiX5ZLm7UYKC4XqdAcB5cNfkN4YmaW5dpb9wilHrzu49k/HIKab\nTRvY+uHr0mBdlA9TfRsV1ZVuFbM9zKgdIgg/0SSr9QKBgQDvg2p9fneghutTvXTY\n5EJRSljevtEDPImmguxCjwoxrHMbffGpnYU3ZMouuAbBUdGf+mGl9DlPOrLQfUNy\n2LJsn++bABFvufBYupnAC3vl/fQ/8u6wbqST6NUMUXibpe1JLRA+ubwELeHgmjuC\nO4RaEmo93R9hDlsSU+dxzkrURQKBgQC/PrSY8aoR1jV/Db6eoMJR9DgOAh9XPYEZ\n9MGjuM9TZWTsYCvBq2K6+GAOdvSpDB3NlqY+fnCOQQiquA9bMEcUxOcsrEKQ0BXh\nGak+/xfdtPkpiWuOMFyafXT8MqRuhRaNfEVGjSdtFdifDIKxPRtmXg3FYQppz2D8\nRX2Z8EicLQKBgE+IMdpOHmcdphL+fEhxM1xO9cexUTJj7clu/Aj1+oqYGvjsD00l\nU1EblM+CqCuVgag/uiEjQcx/T1VP4w/FySmsyiGMGj4hXh/4holwxsmOVIbPolbP\nxrKew+/9NbFpnauI3TYW8snoenLchBowrThDmSfFv1+5JqClX9s4hzyJAoGAafZ8\naiG8cZWWnocnDw1TncULKffTFatmVNNgVy6W8UZE3ROMKwqi8aWc02bluKSV/stx\n4T59btRp0O2a1JOzTraqv/3SBBrHhKmLNPRybM1RIMqbZXU2WgMZRoNoyDPFgy9P\n0v9y0OZB2B4+a6XIALgsOSjDdE0LF7wJE7onASECgYEAxtNKVxhE2PZAmQjTQrqe\nEfRRd12M+Iegr6d8xw3REUO8ZGG0tnfeH90X4D633WdwjokdQG5yLvu6MyFpL4Vd\n8dCvoO2P6Vye7u9j+SuhuwRZNh1LunCcf5W9N915g3GeDIq24H6p41KC72x65XJm\nA/MO9LL6iNQCqygpMNmUlhQ=\n-----END PRIVATE KEY-----\n",
+  "client_email": "general-service@alohadata-team10.iam.gserviceaccount.com",
+  "client_id": "109674484700264646112",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/general-service%40alohadata-team10.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
