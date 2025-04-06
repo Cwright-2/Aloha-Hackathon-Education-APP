@@ -1,12 +1,16 @@
 from flask import Flask, render_template, request, jsonify
 from werkzeug.utils import secure_filename
 import os
-from your_model import classify_cloud_image  # You write this
+import random
+
+from cloudModel import classify_cloud_image
 
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = 'static/uploads'
 
 os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
+
+CLOUD_TYPES = ['cumulonimbus', 'cumulus', 'stratus', 'cirrus', 'nimbostratus', 'altocumulus', 'stratocumulus', 'cirrostratus', 'cirrocumulus', 'stratiformis']
 
 @app.route('/')
 def index():
@@ -24,6 +28,9 @@ def classify():
 
     # Call your AI model here
     prediction = classify_cloud_image(filepath)
+
+    # Temporarily generate a random cloud type
+    # prediction = random.choice(CLOUD_TYPES)
 
     return jsonify({'prediction': prediction})
 
