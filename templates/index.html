@@ -2,21 +2,32 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Cloud Classifier</title>
+  <title>Cloud Classifier Game</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
   <div class="container">
-    <h1>☁️ Cloud Type Classifier</h1>
+    <h1>☁️ Cloud Type Guessing Game</h1>
     <form id="upload-form" enctype="multipart/form-data">
       <input type="file" name="image" accept="image/*" required />
-      <button type="submit">Classify</button>
+      <button type="submit">Upload and Classify</button>
     </form>
+    <div id="guess-section" style="display: none;">
+      <p id="ai-prompt">The AI has classified the cloud. What type of cloud do you think it is?</p>
+      <input type="text" id="user-guess" placeholder="Enter your guess" />
+      <button id="submit-guess">Submit Guess</button>
+      <button id="retry-guess" style="display: none;">Retry with a New Image</button>
+    </div>
     <p id="result"></p>
   </div>
   <script>
     const form = document.getElementById('upload-form');
     const result = document.getElementById('result');
+    const guessSection = document.getElementById('guess-section');
+    const userGuessInput = document.getElementById('user-guess');
+    const submitGuessButton = document.getElementById('submit-guess');
+    const retryGuessButton = document.getElementById('retry-guess');
+    let aiPrediction = '';
 
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
@@ -30,7 +41,28 @@
       });
 
       const data = await response.json();
-      result.textContent = `☁️ Prediction: ${data.prediction}`;
+      aiPrediction = data.prediction;
+      result.textContent = '';
+      guessSection.style.display = 'block';
+      retryGuessButton.style.display = 'none';
+    });
+
+    submitGuessButton.addEventListener('click', () => {
+      const userGuess = userGuessInput.value.trim().toLowerCase();
+      if (userGuess === aiPrediction.toLowerCase()) {
+        result.textContent = `🎉 Correct! The cloud is a ${aiPrediction}.`;
+        retryGuessButton.style.display = 'inline-block';
+        submitGuessButton.style.display = 'none';
+      } else {
+        result.textContent = `❌ Incorrect. Try again!`;
+      }
+    });
+
+    retryGuessButton.addEventListener('click', () => {
+      userGuessInput.value = '';
+      result.textContent = '';
+      guessSection.style.display = 'none';
+      submitGuessButton.style.display = 'inline-block';
     });
   </script>
 </body>

@@ -64,3 +64,47 @@ button:hover {
   font-size: 1.1rem;
   color: #555;
 }
+
+#guess-section {
+  margin-top: 20px;
+}
+
+#user-guess {
+  border: 2px solid #90caf9;
+  padding: 10px;
+  border-radius: 8px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#submit-guess {
+  background-color: #42a5f5;
+  color: white;
+  border: none;
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+#submit-guess:hover {
+  background-color: #1e88e5;
+}
+
+#retry-guess {
+  background-color: #ff7043;
+  color: white;
+  border: none;
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+#retry-guess:hover {
+  background-color: #e64a19;
+}
