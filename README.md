@@ -1,43 +1,45 @@
-# 🌤️ Sky-Quest: An Interactive Cloud & Weather Learning Bot for Kids
+# 🌤️ Sky-Quest — Aloha Hackathon Education App
 
-**Sky-Quest** is a voice-enabled, AI-powered chatbot designed to help kids aged 10 and under explore clouds and weather patterns in Hawaiʻi. It’s a fun, safe, and interactive way to encourage outdoor learning, curiosity, and connection with the natural world.
-
----
-
-## 📚 What It Does
-
-- 🗣️ **Talks and Listens** – Uses speech recognition and text-to-speech to hold natural conversations with kids.
-- ☁️ **Identifies Clouds and Weather** – Explains different types of clouds and what they mean for the weather.
-- 🌍 **Encourages Real-World Exploration** – Promotes outdoor observation using local time, location, and temperature.
-- 🔍 **Performs Web Searches** – Handles safe, filtered queries using Google Custom Search.
-- ✅ **Filters Unsafe Topics** – Blocks inappropriate words and uses Gemini's content safety tools.
-- 🌈 **Hawaii Context** – Localized to help kids in Hawaiʻi understand their unique environment.
+**Sky-Quest** is a voice-enabled educational chatbot built for kids 10 and under to explore clouds and weather in Hawai‘i through fun, interactive conversations. Created for the **Aloha Hackathon**, the app combines speech recognition, AI-generated answers from Google Gemini, and friendly text-to-speech feedback.
 
 ---
 
-## 🚀 Technologies Used
+## 🧠 What It Does
 
-- **Google Gemini-2.0-flash-001 and Vertex AI(Generative AI)** – For natural language responses.
-- **Speech Recognition + Text-to-Speech** – Via custom `gemnai` module (or compatible tools like `SpeechRecognition`, `gTTS`, `pyttsx3`, etc.).
-- **Google Custom Search API** – For safe and filtered web queries.
-- **dotenv** – For managing API keys securely with environment variables.
-
----
-
-## 🛡️ Kid-Safe Features
-
-- Strict **Gemini Safety Settings** for filtering content.
-- Custom **blocked words list** to avoid harmful topics.
-- Friendly, age-appropriate responses.
-- No storage of user data or personal information.
-
+Sky-Quest inspires curiosity and learning by helping kids:
+- Identify types of clouds and what they mean
+- Understand weather patterns through conversation
+- Explore the world around them in a mindful way
 
 ---
 
-## 🔧 How to Run
+## 🧩 Features
 
-1. **Clone the repo:**
+- 🎙️ Voice interaction: Ask questions and get spoken answers
+- ☁️ Gemini-powered responses tailored for children
+- 🔍 Integrated safe search using Google Custom Search
+- 🗣️ Google Cloud TTS for realistic, child-friendly speech
+- 🔐 Filters out inappropriate topics and language
 
-   ```bash
-   git clone https://github.com/Cwright-2/Aloha-Hackathon-Education-APP.git
-   cd Aloha-Hackathon-Education-APP
+---
+
+## 🛠️ Built With
+
+- **Python 3.8+**
+- Google Generative AI (Gemini)
+- Google Cloud Text-to-Speech
+- SpeechRecognition
+- Google Custom Search API
+- dotenv for key management
+
+---
+
+## 🚀 Getting Started (All-in-One Setup)
+
+Follow these steps to run the app on your local machine:
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/yourusername/Aloha-Hackathon-Education-APP.git
+cd Aloha-Hackathon-Education-APP
