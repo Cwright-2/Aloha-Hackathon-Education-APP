@@ -1,11 +1,12 @@
-from flask import Flask, request, jsonify, render_template
+from flask import Flask, render_template, request, jsonify
 from werkzeug.utils import secure_filename
 import os
-from your_model import classify_cloud_image  # Replace with your model
+from your_model import classify_cloud_image  # You write this
 
 app = Flask(__name__)
-UPLOAD_FOLDER = 'uploads'
-os.makedirs(UPLOAD_FOLDER, exist_ok=True)
+app.config['UPLOAD_FOLDER'] = 'static/uploads'
+
+os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
 
 @app.route('/')
 def index():
@@ -13,17 +14,18 @@ def index():
 
 @app.route('/classify', methods=['POST'])
 def classify():
+    if 'image' not in request.files:
+        return jsonify({'error': 'No file uploaded'}), 400
+
     file = request.files['image']
-    if file:
-        filename = secure_filename(file.filename)
-        filepath = os.path.join(UPLOAD_FOLDER, filename)
-        file.save(filepath)
+    filename = secure_filename(file.filename)
+    filepath = os.path.join(app.config['UPLOAD_FOLDER'], filename)
+    file.save(filepath)
 
-        # Run your model prediction here
-        prediction = classify_cloud_image(filepath)
+    # Call your AI model here
+    prediction = classify_cloud_image(filepath)
 
-        return jsonify({'prediction': prediction})
-    return jsonify({'error': 'No file uploaded'}), 400
+    return jsonify({'prediction': prediction})
 
 if __name__ == '__main__':
     app.run(debug=True)

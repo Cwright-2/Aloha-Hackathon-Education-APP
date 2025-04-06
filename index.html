@@ -3,47 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <title>Cloud Classifier</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      padding: 50px;
-    }
-    .upload-section {
-      margin-top: 30px;
-    }
-  </style>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-  <h1>Cloud Type Classifier</h1>
-  <p>Upload an image of a cloud and our AI will identify the cloud type.</p>
-
-  <div class="upload-section">
-    <form id="upload-form" enctype="multipart/form-data">
-      <input type="file" name="image" accept="image/*" required />
-      <br><br>
-      <button type="submit">Classify</button>
-    </form>
-    <p id="result" style="margin-top:20px;"></p>
-  </div>
-
+  <h1>☁️ Cloud Type Classifier</h1>
+  <form id="upload-form" enctype="multipart/form-data">
+    <input type="file" name="image" accept="image/*" required />
+    <button type="submit">Classify</button>
+  </form>
+  <p id="result"></p>
   <script>
     const form = document.getElementById('upload-form');
-    const resultText = document.getElementById('result');
+    const result = document.getElementById('result');
 
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
       const formData = new FormData(form);
 
-      resultText.textContent = 'Classifying...';
+      result.textContent = 'Classifying...';
 
       const response = await fetch('/classify', {
         method: 'POST',
-        body: formData,
+        body: formData
       });
 
       const data = await response.json();
-      resultText.textContent = `Prediction: ${data.prediction}`;
+      result.textContent = `☁️ Prediction: ${data.prediction}`;
     });
   </script>
 </body>
